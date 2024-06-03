@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triveni Sales</title>
+
+    <!--  BOXICONS  -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../style/styles.css">
+    <link rel="stylesheet" href="../style/cart.css">
+
+</head>
+<body>
+<header class="header-left">
+    <nav class="nav grid">
+        <div>
+            <a href="" class="nav__logo">Triveni Sales</a>
+        </div>
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                <li class="nav__item"><a href="#featured" class="nav__link">Featured</a></li>
+                <li class="nav__item"><a href="#new-products" class="nav__link">New Arrivals</a></li>
+                <li class="nav__item"><a href="product-list.html" class="nav__link">Products</a></li>
+                <li class="nav__item"><a href="contact-us.html" class="nav__link">Contact Us</a></li>
+                <li class="nav__item"><a href="#subscribed" class="nav__link">Subscribed</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <a href="cart-details.html">
+                <i class="bx bx-cart nav__cart"></i>
+            </a>
+            <i class="bx bx-menu nav__toggle" id="nav-toggle"></i>
+        </div>
+    </nav>
+</header>
+
+<main class="main-center">
+    <!-- CART DETAILS -->
+    <section class="section" id="cart">
+        <h2 class="section-title">CART DETAILS </h2>
+        <p class="title-info">Please ensure your orders are correct before checkout</p>
+        <table width="100%">
+            <thead>
+            <tr>
+                <td>Remove</td>
+                <td>Image</td>
+                <td>Product</td>
+                <td>Price</td>
+                <td>Quantity</td>
+                <td>Subtotal</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><a href="#"><img id="close" class="close-icon-cart" src="img/icons/x.png"></a></td>
+                <td><img src="img/products/f1.jpg"></td>
+                <td>Cartoon Astronaut T-Shirts</td>
+                <td>$118.19</td>
+                <td><input type="number" value="1"></td>
+                <td>$118.19</td>
+            </tr>
+            <tr>
+                <td><a href="#"><img id="close" class="close-icon-cart" src="img/icons/x.png"></a></td>
+                <td><img src="img/products/f2.jpg"></td>
+                <td>Cartoon Astronaut T-Shirts</td>
+                <td>$118.19</td>
+                <td><input type="number" value="1"></td>
+                <td>$118.19</td>
+            </tr>
+            <tr>
+                <td><a href="#"><img id="close" class="close-icon-cart" src="img/icons/x.png"></a></td>
+                <td><img src="img/products/f3.jpg"></td>
+                <td>Cartoon Astronaut T-Shirts</td>
+                <td>$118.19</td>
+                <td><input type="number" value="1"></td>
+                <td>$118.19</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="cart-add" class="section-p1">
+        <div id="coupon">
+            <h3>Apply Coupon</h3>
+            <div>
+                <input type="text" placeholder="Enter Your Coupon">
+                <button class="normal">Apply</button>
+            </div>
+        </div>
+        <div id="subtotal">
+            <h3>Cart Totals</h3>
+            <table>
+                <tr>
+                    <td>Cart Subtotal</td>
+                    <td>$ 335</td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>$ 335</td>
+                </tr>
+            </table>
+            <button class="normal">Proceed to checkout</button>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer section">
+    <div class="footer__container grid">
+        <div class="footer__box">
+            <h3 class="footer__title">Triveni Sales</h3>
+            <p class="footer__deal">Products store</p>
+            <a href="#"><img src="../img/footerstore1.png" alt="" class="footer__store"></a>
+            <a href="#"><img src="../img/footerstore2.png" alt="" class="footer__store"></a>
+        </div>
+
+        <div class="footer__box">
+            <h3 class="footer__title">EXPLORE</h3>
+            <ul>
+                <li><a href="#" class="footer__link">Home</a></li>
+                <li><a href="#" class="footer__link">Featured</a></li>
+                <li><a href="#" class="footer__link">New</a></li>
+                <li><a href="#" class="footer__link">Subscribe</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__box">
+            <h3 class="footer__title">OUR SERVICES</h3>
+            <ul>
+                <li><a href="#" class="footer__link">Pricing</a></li>
+                <li><a href="#" class="footer__link">Free Shipping</a></li>
+                <li><a href="#" class="footer__link">Gift Cards</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__box">
+            <h3 class="footer__title">FOLLOW US</h3>
+            <a href="#" class="footer__social"><i class='bx bxl-facebook-square'></i></a>
+            <a href="#" class="footer__social"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+        </div>
+    </div>
+
+    <p class="footer__copy">&#169; 2024 copyright all rights reserved.</p>
+</footer>
+
+<!-- JS Import -->
+<script src="../js/main.js"></script>
+</body>
+</html>
