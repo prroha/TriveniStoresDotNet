@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Detail Page</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<style>
+    /* GOOGLE FONTS */
+    @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+    /* VARIABLES CSS */
+    :root {
+        --header-height: 3rem;
+        --font-semi: 600;
+        --font-bold: 700;
+        /* For Spacing */
+        --spacing-small: 0.5rem;
+        --spacing-medium: 1rem;
+        --spacing-large: 2rem;
+        /* For Borders and Radius */
+        --border-width: 1px;
+        --border-style: solid;
+        --border-color: #ddd;
+        --border-radius: 0.25rem;
+        /* For Colors */
+        --first-color: #E55947;
+        --first-color-alt: #D2321E;
+        --white-color: #FAFAFF;
+        --dark-color: #101010;
+        --dark-color-light: #606060;
+        --gray-color: #F0F1F3;
+        --primary-color: #3498db;
+        --secondary-color: #2ecc71;
+        --accent-color: #e74c3c;
+        --background-color: #f4f4f4;
+        --text-color: #333333;
+        /* For Typography */
+        --body-font: 'Open Sans', sans-serif;
+        --font-size-base: 1rem;
+        --line-height: 1.5;
+        --big-font-size: 3rem;
+        --h1-font-size: 1.5rem;
+        --h2-font-size: 1.25rem;
+        --normal-font-size: .938rem;
+        --small-font-size: .75rem;
+        /* Margins */
+        --mb-1: 0.5rem;
+        --mb-2: 1rem;
+        --mb-3: 1.5rem;
+        --mb-4: 2rem;
+        /* z index */
+        --z-tooltip: 10;
+        --z-fixed: 100;
+    }
+
+    /* BASE */
+    *, ::before, ::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .product-image {
+        flex: 1;
+    }
+
+    .product-image img {
+        width: 100%;
+    }
+
+    .product-details {
+        flex: 1;
+        padding-left: 20px;
+    }
+
+    .rating {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .stars {
+        color: black;
+        font-size: 18px;
+        margin-right: 5px;
+    }
+
+    .reviews {
+        color: #6B6B6B;
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .color-selector,
+    .size-selector,
+    .quantity-selector {
+        margin-bottom: 10px;
+    }
+
+    .color-option {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin-left: 5px;
+        cursor: pointer;
+    }
+
+    .size-chart {
+        margin-left: 10px;
+        color: #6B6B6B;
+        text-decoration: none;
+    }
+
+    .add-to-bag,
+    .add-to-wishlist {
+        padding: 10px 20px;
+        margin-top: 10px;
+        background-color: black;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .stock-info {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #6B6B6B;
+    }
+</style>
+<body>
+<div class="container">
+    <div class="product-image">
+        <img src="product.jpg" alt="Product Image">
+    </div>
+    <div class="product-details">
+        <h1>Ludlow Slim-fit suit pant in heathered Italian wool flannel</h1>
+        <p>Item 17557</p>
+        <div class="rating">
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <span class="reviews">6 REVIEWS</span>
+        </div>
+        <p class="price">Was£266.00 £186.00</p>
+        <div class="color-selector">
+            <span class="color-label">Color:</span>
+            <span class="color-option selected" style="background-color: blue;"></span>
+        </div>
+        <div class="size-selector">
+            <label for="size">Size:</label>
+            <select id="size">
+                <option value="32/34">32/34</option>
+                <!-- Add more size options -->
+            </select>
+            <a href="#" class="size-chart">Size Chart</a>
+        </div>
+        <div class="quantity-selector">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" value="1" min="1">
+        </div>
+        <button class="add-to-bag">ADD TO BAG</button>
+        <button class="add-to-wishlist">ADD TO WISHLIST</button>
+        <p class="stock-info">Prices do not include taxes. IN STOCK - ONLY A FEW LEFT</p>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

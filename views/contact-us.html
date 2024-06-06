@@ -7,11 +7,12 @@
 
     <!--  BOXICONS  -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../style/styles.css">
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/contact.css">
 
 </head>
 <body>
-<header class="header-left">
+<header class="header">
     <nav class="nav grid">
         <div>
             <a href="" class="nav__logo">Triveni Sales</a>
@@ -37,50 +38,40 @@
 
 <main class="main-center">
     <!-- CONTACT US -->
-    <section class="section" id="contact">
+    <section class="section">
         <h2 class="section-title">CONTACT US</h2>
         <p class="title-info">Please feel free to approach us for support</p>
-        <div class="details">
-            <span>GET IN TOUCH</span>
-            <h2>Visit one of our agency locations or contact us today</h2>
-            <h3>Head Office</h3>
-            <div>
-                <li>
-                    <p>Maitidevi, Kathmandu</p>
-                </li>
-                <li>
-                    <p>contact@host.com</p>
-                </li>
-                <li>
-                    <p>6856436721</p>
-                </li>
-                <li>
-                    <p>Monday to Friday: 9.00am to 6.00pm</p>
-                </li>
+        <div class="grid contact-grid">
+            <div class="location-map">
+                <h3 class="section-title">Our Location</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.02166667906!2d-118.69192257638436!3d34.02016130766778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bb67a82b7b47%3A0xe25d8dc9186ac3e8!2sLos%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1623828372986!5m2!1sen!2sus"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+            <div class="contact-form">
+                <h3 class="section-title">Send Message</h3>
+                <form action="#" method="post" class="form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" class="newsletter__input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" class="newsletter__input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" class="newsletter__input" required></textarea>
+                    </div>
+                    <button type="submit" class="button">Send Message</button>
+                </form>
             </div>
         </div>
-        <div class="map">
-            <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2469.808983023014!2d-1.254366800000044!3d51.75481639999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876c6a9ef8c485b%3A0xd2ff1883a001afed!2sUniversidad%20de%20Oxford!5e0!3m2!1ses-419!2sus!4v1673031646353!5m2!1ses-419!2sus"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
-
-        <div class="contact-form">
-            <h3>Send Message</h3>
-            <div class="input-box">
-                <input type="text" placeholder="Name" required>
-            </div>
-            <div class="input-box">
-                <input type="email" placeholder="Email" required>
-            </div>
-            <div class="input-box">
-                <textarea placeholder="Message line..." required></textarea>
-            </div>
-            <div class="input-box">
-                <input type="submit" value="Send">
-            </div>
+        <div class="contact-details">
+            <h3 class="section-title">Contact Details</h3>
+            <p class="title-info">Email: contact@example.com</p>
+            <p class="title-info">Phone: +123-456-7890</p>
+            <p class="title-info">Address: 123 Street Name, City, Country</p>
         </div>
     </section>
 </main>
