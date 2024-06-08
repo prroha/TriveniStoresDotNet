@@ -1,114 +1,91 @@
-#cart{
-    overflow-x: auto;
-}
-#cart table{
+/* Updated CSS for the Cart Details Page */
+
+.styled-table {
     width: 100%;
     border-collapse: collapse;
-    table-layout: fixed;
-    white-space: nowrap;
-}
-#cart table img{
-    width: 70px;
-}
-#cart table td:nth-child(1){
-    width: 100px;
-    text-align: center;
-}
-#cart table td:nth-child(2){
-    width: 150px;
-    text-align: center;
-}
-#cart table td:nth-child(3){
-    width: 250px;
-    text-align: center;
-}
-#cart table td:nth-child(4),
-#cart table td:nth-child(5),
-#cart table td:nth-child(6){
-    width: 150px;
-    text-align: center;
-}
-#cart table tbody tr td a{
-    display: flex;
-    justify-content: center;
-}
-#cart table td:nth-child(5) input{
-    width: 70px;
-    padding: 10px 5px 10px 15px;
-}
-#cart table thead{
-    border: 1px solid #e2e9e1;
-    border-left: none;
-    border-right: none;
-}
-#cart table thead td{
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 13px;
-    padding: 18px 0;
-}
-#cart table tbody tr td{
-    padding-top: 15px;
-}
-#cart table tbody td{
-    font-size: 13px;
-}
-#cart table tbody tr td a .close-icon-cart{
-    width: 20px;
+    margin: var(--mb-2) 0;
+    font-size: var(--normal-font-size);
+    text-align: left;
 }
 
-#cart-add{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.styled-table thead tr {
+    background-color: var(--first-color);
+    color: var(--white-color);
+    text-align: left;
+    font-weight: var(--font-bold);
 }
-#coupon{
-    width: 50%;
-    margin-bottom: 30px;
+
+.styled-table th, .styled-table td {
+    padding: var(--spacing-small);
+    border: 1px solid var(--border-color);
 }
-#coupon h3,
-#subtotal h3{
-    padding-bottom: 15px;
+
+.styled-table tbody tr {
+    border-bottom: 1px solid var(--border-color);
 }
-#coupon input{
-    padding: 10px 20px;
-    outline: none;
-    width: 60%;
-    margin-right: 10px;
-    border: 1px solid #e2e9e1;
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: var(--gray-color-light);
 }
-#coupon button,
-#subtotal button{
-    background-color: #088178;
-    color: #fff;
-    padding: 12px 20px;
+
+.styled-table tbody tr:hover {
+    background-color: var(--first-color-light);
+    color: inherit;
 }
-#subtotal{
-    width: 50%;
-    margin-bottom: 30px;
-    border: 1px solid #e2e9e1;
-    padding: 30px;
+
+.cart-quantity {
+    width: 60px;
+    padding: var(--spacing-small);
+    border: var(--border-width) var(--border-style) var(--border-color);
+    border-radius: var(--border-radius);
+    text-align: center;
 }
-#subtotal table{
-    border-collapse:  collapse;
-    width: 100%;
-    margin-bottom: 20px;
+
+.button-remove {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    padding: var(--spacing-small);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-#subtotal table td{
-    width: 50%;
-    border: 1px solid #e2e9e1;
-    padding: 10px;
-    font-size: 13px;
+
+.button-remove:hover {
+    background-color: var(--accent-color-alt);
 }
-@media (max-width: 477px){
-    #cart-add{
-        flex-direction: column;
-    }
-    #coupon{
-        width: 100%;
-    }
-    #subtotal{
-        width: 100%;
-        padding: 20px;
-    }
+
+.cart-summary {
+    text-align: right;
+}
+
+.cart-summary p, .cart-summary h2 {
+    margin: var(--mb-1) 0;
+    font-size: var(--normal-font-size);
+}
+
+.cart-summary h2 {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-bold);
+}
+
+.cart-actions {
+    text-align: right;
+    margin-top: var(--spacing-large);
+}
+
+.cart-actions .button-primary {
+    background-color: var(--first-color);
+    color: var(--white-color);
+    padding: var(--spacing-small) var(--spacing-medium);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-actions .button-primary:hover {
+    background-color: var(--first-color-alt);
 }

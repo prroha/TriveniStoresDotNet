@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page - User Management</title>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../../style/main.css">
+    <link rel="stylesheet" href="../../style/admin.css">
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+    <nav class="nav grid ">
+        <div class="header__title">
+            <a href="../index.html" class="">Triveni Sales</a>
+        </div>
+    </nav>
+</header>
+<main class="main-content content-center login">
+    <!--    <section id="user-management" class="section">-->
+    <div class="section-title">
+        <h2>Login</h2>
+    </div>
+    <div class="user-form card">
+        <form id="userForm" class="user-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" class="user-form__input form-control" placeholder="Enter username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="text" id="password" class="user-form__input form-control" placeholder="Enter password" name="password" required>
+            </div>
+
+            <button type="submit" class="button">Login</button>
+        </form>
+        <div class="content-center">
+            <label >Not a User?</label>
+        </div>
+        <a href="../login/register.html" class="button content-center">Register</a>
+    </div>
+    <!--    </section>-->
+</main>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const userForm = document.getElementById('userForm');
+        const userTableBody = document.getElementById('userTableBody');
+
+        userForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const username = userForm.username.value;
+            const password = userForm.password.value;
+            console.log("User Logged in")
+        });
+    });
+
+    function editUser(button) {
+        const row = button.parentElement.parentElement;
+        const username = row.cells[0].textContent;
+        const email = row.cells[1].textContent;
+        const role = row.cells[2].textContent;
+
+        const userForm = document.getElementById('userForm');
+        userForm.username.value = username;
+        userForm.email.value = email;
+        userForm.role.value = role;
+
+        row.remove();
+    }
+
+    function deleteUser(button) {
+        const row = button.parentElement.parentElement;
+        row.remove();
+    }
+</script>
+</body>
+</html>
