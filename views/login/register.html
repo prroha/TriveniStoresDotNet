@@ -54,7 +54,7 @@
             </div>
             <div class="form-group">
                 <label for="password2">Re-enter Password</label>
-                <input type="text" id="password2" class="user-form__input form-control" placeholder="Re-enter password" name="password" required>
+                <input type="text" id="password2" class="user-form__input form-control" placeholder="Re-enter password" name="password2" required>
             </div>
 
             <button type="submit" class="button">Register</button>
@@ -71,6 +71,13 @@
     document.addEventListener('DOMContentLoaded', function () {
         const userForm = document.getElementById('userForm');
 
+        // Function to store user data in local storage
+        function storeUserData(userData) {
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            users.push(userData);
+            localStorage.setItem('users', JSON.stringify(users));
+        }
+
         userForm.addEventListener('submit', function (e) {
             e.preventDefault();
             const fullName = userForm.fullName.value;
@@ -80,11 +87,32 @@
             const email = userForm.email.value;
             const role = userForm.role.value;
 
-            if(password !== password2){
+            // Validate password match
+            if (password !== password2) {
+                alert('Passwords do not match');
                 return;
             }
+
+            // Create user object
+            const userData = {
+                fullName: fullName,
+                username: username,
+                password: password,
+                email: email,
+                role: role
+            };
+
+            // Store user data
+            storeUserData(userData);
+
+            // Reset form
+            userForm.reset();
+
+            window.location.href = '../login/login.html';
         });
+
     });
+
 </script>
 </body>
 </html>

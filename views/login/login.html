@@ -45,34 +45,32 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const userForm = document.getElementById('userForm');
-        const userTableBody = document.getElementById('userTableBody');
 
         userForm.addEventListener('submit', function (e) {
             e.preventDefault();
             const username = userForm.username.value;
             const password = userForm.password.value;
-            console.log("User Logged in")
+            const user = validateLogin(username, password);
+            if (user) {
+                if (user.role === 'admin') {
+                    // Redirect to admin page
+                    window.location.href = '../admin/users/users.html';
+                } else {
+                    // Redirect to home page
+                    window.location.href = '../index.html';
+                }
+            } else {
+                alert('Invalid username or password');
+            }
         });
+        // Function to validate login credentials
+        function validateLogin(username, password) {
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            return users.find(user => user.username === username && user.password === password);
+        }
+
     });
 
-    function editUser(button) {
-        const row = button.parentElement.parentElement;
-        const username = row.cells[0].textContent;
-        const email = row.cells[1].textContent;
-        const role = row.cells[2].textContent;
-
-        const userForm = document.getElementById('userForm');
-        userForm.username.value = username;
-        userForm.email.value = email;
-        userForm.role.value = role;
-
-        row.remove();
-    }
-
-    function deleteUser(button) {
-        const row = button.parentElement.parentElement;
-        row.remove();
-    }
 </script>
 </body>
 </html>
