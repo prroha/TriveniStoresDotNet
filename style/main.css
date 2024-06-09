@@ -392,11 +392,23 @@
 .m-2 {
     margin: var(--mb-2);
 }
+.mt-1 {
+    margin-top: var(--mb-1);
+}
 .p-1 {
     padding: var(--pb-1);
 }
 .p-2 {
     padding: var(--pb-2);
+}
+.w-400{
+    width: 400px;
+}
+.w-800{
+    width: 800px;
+}
+.w-1000{
+    width: 1000px;
 }
 /* Card Elements */
 .content-center{
@@ -520,3 +532,5 @@
 .link-secondary {
     color: var(--secondary-color);
 }
+/*LAYOUT PART*/
+/*LAYOUT PART END*/

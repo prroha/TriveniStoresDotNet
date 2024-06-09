@@ -25,35 +25,39 @@
                 <li class="nav__item"><a href="#new-products" class="nav__link">New Arrivals</a></li>
                 <li class="nav__item"><a href="product-list.html" class="nav__link">Products</a></li>
                 <li class="nav__item"><a href="contact-us.html" class="nav__link">Contact Us</a></li>
+                <li class="nav__item"><a href="login/login.html" class="nav__link">Login</a></li>
             </ul>
         </div>
 
-        <div>
+        <div class="">
             <ul class="nav__list">
-                <li class="nav__item"><a href="login/login.html" class="nav__link">Login</a></li>
                 <li class="nav__item">   <a href="cart-details.html">
                     <i class="bx bx-cart nav__cart"></i>
                 </a></li>
+                <li class="nav__item">
+                    <a href="#" class="">
+                        <i class="bx bx-menu nav__toggle" id="nav-toggle"></i>
+                    </a>
+                </li>
             </ul>
-            <i class="bx bx-menu nav__toggle" id="nav-toggle"></i>
         </div>
     </nav>
 </header>
 
-<main class="main-center">
+<main class="main-content-full">
     <!-- CONTACT US -->
     <section class="section">
         <h2 class="section-title">CONTACT US</h2>
         <p class="title-info">Please feel free to approach us for support</p>
-        <div class="grid-two">
+        <div class="grid-two w-1000">
             <div class="location-map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158977.54255671786!2d-0.2416819999999959!3d51.5285582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604b7b210f3dd%3A0x6a5df291c63f6b8d!2sLondon%2C%20UK!5e0!3m2!1sen!2sus!4v1623828372986!5m2!1sen!2sus"
                         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
                 </iframe>
             </div>
             <div class="contact-form card">
-                <h3 class="section-title">Send a Message</h3>
-                <form action="#" method="post" class="form">
+                <h3 class="title-info">Send a Message</h3>
+                <form action="#" method="post" class="user-form">
                     <div class="form-group">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" class="newsletter__input" placeholder="Enter name" required>

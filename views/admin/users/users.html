@@ -30,68 +30,75 @@
             <div class="header__profile-img">
                 <i class="bx bxs-user-circle profile-icon" id="profileDropdownButton"></i>
             </div>
-<!--            <img src="../../../img/profile.jpg" alt="Profile Image" class="admin-header__profile-img" id="profileDropdownButton">-->
+            <!--            <img src="../../../img/profile.jpg" alt="Profile Image" class="admin-header__profile-img" id="profileDropdownButton">-->
             <div class="header__profile-dropdown" id="profileDropdown">
                 <a href="../profile.html" class="admin-header__profile-link">Edit Profile</a>
                 <a href="../../index.html" class="admin-header__profile-link">Home Page</a>
-                <a href="#" class="admin-header__profile-link">Logout</a>
+                <a href="#" class="admin-header__profile-link" id="logout">Logout</a>
             </div>
         </div>
     </div>
 </header>
 <main class="main-content">
-<!--    <section id="user-management" class="section">-->
-        <div class="section-title">
-            <h2>User Management</h2>
-        </div>
-    <div class="user-form card">
-        <h3>Create / Edit User</h3>
-        <form id="userForm" class="user-form">
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" class="user-form__input form-control" placeholder="Enter your name" name="username" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" class="user-form__input form-control" placeholder="Enter your email" required>
-            </div>
-
-            <div class="form-group">
-                <label for="role">Role</label>
-                <select name="role" id="role">
-                    <option value="admin">Admin</option>
-                    <option value="editor">Editor</option>
-                    <option value="viewer">Viewer</option>
-                </select>
-            </div>
-
-            <button type="submit" class="button">Save User</button>
-        </form>
-
+    <!--    <section id="user-management" class="section">-->
+    <div class="section-title">
+        <h2>User Management</h2>
     </div>
+    <div class="cards-container">
+        <div class="card">
+            <div class="">
+                <h3>Create / Edit User</h3>
+                <form id="userForm" class="user-form">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" class="user-form__input form-control" placeholder="Enter your name" name="username" required>
+                    </div>
 
-    <div class="user-list card">
-        <h3>User List</h3>
-        <table>
-            <thead>
-            <tr>
-                <th>Username</th>
-                <th>Email</th>
-                <th>Role</th>
-                <th>Actions</th>
-            </tr>
-            </thead>
-            <tbody id="userTableBody">
-            <!-- Users will be dynamically inserted here -->
-            </tbody>
-        </table>
-    </div><!--    </section>-->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="user-form__input form-control" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="role">Role</label>
+                        <select name="role" id="role">
+                            <option value="admin">Admin</option>
+                            <option value="editor">Editor</option>
+                            <option value="viewer">Viewer</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="button">Save User</button>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="">
+                <h3>User List</h3>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody id="userTableBody">
+                    <!-- Users will be dynamically inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </div><!--    </section>-->
+    </div>
 </main>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const profileDropdownButton = document.getElementById('profileDropdownButton');
         const profileDropdown = document.getElementById('profileDropdown');
+        const logoutButton = document.getElementById('logout');
 
         profileDropdownButton.addEventListener('click', function (e) {
             e.stopPropagation();
@@ -101,7 +108,18 @@
         document.addEventListener('click', function () {
             profileDropdown.classList.remove('admin-header__profile--active');
         });
+        logoutButton.addEventListener('click', function () {
+            logout();
+        });
     });
+    function logout(username, password) {
+        // const users = JSON.parse(localStorage.getItem('users')) || [];
+        // users = users.remove(user => user.username === username && user.password === password);
+        // users.push(userData);
+        // return localStorage.setItem('users', JSON.stringify(users));
+
+        window.location.href = '../../login/login.html';
+    }
 </script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {

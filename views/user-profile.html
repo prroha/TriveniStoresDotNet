@@ -10,23 +10,46 @@
 <body>
 <!-- Header -->
 <header class="header">
-<!--    <div class="admin-header__content">-->
-        <nav class="nav header__content">
-            <div class="header__title">
-                <a href="" class="">Triveni Sales</a>
+    <nav class="nav grid ">
+        <div class="header__title">
+            <a href="index.html" class="">Triveni Sales</a>
+        </div>
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html/#home" class="nav__link active">Home</a></li>
+                <li class="nav__item"><a href="index.html#featured" class="nav__link">Featured</a></li>
+                <li class="nav__item"><a href="index.html#new-products" class="nav__link">New Arrivals</a></li>
+                <li class="nav__item"><a href="product-list.html" class="nav__link">Products</a></li>
+                <li class="nav__item"><a href="contact-us.html" class="nav__link">Contact Us</a></li>
+                <li class="nav__item"><a href="login/login.html" class="nav__link">Login</a></li>
+            </ul>
+        </div>
+
+        <div class="">
+            <ul class="nav__list">
+                <li class="nav__item">   <a href="cart-details.html">
+                    <i class="bx bx-cart nav__cart"></i>
+                </a></li>
+                <li class="nav__item">
+                    <a href="#" class="">
+                        <i class="bx bx-menu nav__toggle" id="nav-toggle"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="header__profile">
+            <div class="header__profile-img">
+                <i class="bx bxs-user-circle profile-icon" id="profileDropdownButton"></i>
             </div>
-            <div class="header__profile">
-                <div class="header__profile-img">
-                    <i class="bx bxs-user-circle profile-icon" id="profileDropdownButton"></i>
-                </div>
-                <div class="header__profile-dropdown" id="profileDropdown">
-                    <a href="index.html" class="admin-header__profile-link">Home Page</a>
-                    <a href="#" class="admin-header__profile-link">Logout</a>
-                </div>
+            <div class="header__profile-dropdown" id="profileDropdown">
+                <a href="index.html" class="admin-header__profile-link">Home Page</a>
+                <a href="#" class="admin-header__profile-link">Logout</a>
             </div>
-        </nav>
-<!--    </div>-->
+        </div>
+    </nav>
 </header>
+
 <main class="main-content">
     <!--    <section id="user-management" class="section">-->
     <div class="section-title">
@@ -90,5 +113,7 @@
         });
     });
 </script>
+<!-- JS Import -->
+<script src="../js/main.js"></script>
 </body>
 </html>

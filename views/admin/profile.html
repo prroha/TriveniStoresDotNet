@@ -23,7 +23,7 @@
             <div class="header__profile-dropdown" id="profileDropdown">
                 <a href="profile.html" class="admin-header__profile-link">Edit Profile</a>
                 <a href="../index.html" class="admin-header__profile-link">Home Page</a>
-                <a href="#" class="admin-header__profile-link">Logout</a>
+                <a href="#" class="admin-header__profile-link" id="logout">Logout</a>
             </div>
         </div>
     </div>
@@ -42,7 +42,7 @@
     <div class="section-title">
         <h2>Edit Profile</h2>
     </div>
-    <div class="user-form card card-grid">
+    <div class="card grid-two">
         <form id="userForm" class="">
             <div class="form-group">
                 <label for="fullName">FullName</label>
@@ -107,6 +107,7 @@
     });
     document.addEventListener('DOMContentLoaded', function () {
         const userForm = document.getElementById('userForm');
+        const logoutButton = document.getElementById('logout');
 
         userForm.addEventListener('submit', function (e) {
             e.preventDefault();
@@ -115,6 +116,15 @@
             const role = userForm.role.value;
 
         });
+
+
+        logoutButton.addEventListener('click', function () {
+            logout();
+        });
+        function logout(username, password) {
+
+            window.location.href = '../../login/login.html';
+        }
     });
 </script>
 </body>

@@ -6,7 +6,7 @@
     <title>Admin Page - User Management</title>
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../../style/main.css">
-    <link rel="stylesheet" href="../../style/admin.css">
+<!--    <link rel="stylesheet" href="../../style/admin.css">-->
 </head>
 <body>
 <!-- Header -->
@@ -19,51 +19,53 @@
     </nav>
 </header>
 
-<main class="main-content content-center">
+<main class="main-content ">
     <!--    <section id="user-management" class="section">-->
     <div class="section-title">
         <h2>Register</h2>
     </div>
-    <div class="user-form card">
-        <form id="userForm" class="user-form">
-            <div class="form-group">
-                <label for="fullName">Fullname</label>
-                <input type="text" id="fullName" class="user-form__input form-control" placeholder="Enter your full name" name="fullName" required>
-            </div>
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" class="user-form__input form-control" placeholder="Enter your username" name="username" required>
-            </div>
+    <div class="card">
+        <div class="w-400">
+            <form id="userForm" class="user-form ">
+                <div class="form-group ">
+                    <label for="fullName">Fullname</label>
+                    <input type="text" id="fullName" class="user-form__input form-control" placeholder="Enter your full name" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" class="user-form__input form-control" placeholder="Enter your username" name="username" required>
+                </div>
 
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" class="user-form__input form-control" placeholder="Enter your email" required>
-            </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="user-form__input form-control" placeholder="Enter your email" required>
+                </div>
 
-            <div class="form-group">
-                <label for="role">Role</label>
-                <select name="role" id="role">
-                    <option value="admin">Admin</option>
-                    <option value="editor">Editor</option>
-                    <option value="viewer">Viewer</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="text" id="password" class="user-form__input form-control" placeholder="Enter password" name="password" required>
-            </div>
-            <div class="form-group">
-                <label for="password2">Re-enter Password</label>
-                <input type="text" id="password2" class="user-form__input form-control" placeholder="Re-enter password" name="password2" required>
-            </div>
+                <div class="form-group">
+                    <label for="role">Role</label>
+                    <select name="role" id="role">
+                        <option value="admin">Admin</option>
+                        <option value="editor">Editor</option>
+                        <option value="viewer">Viewer</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="text" id="password" class="user-form__input form-control" placeholder="Enter password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="password2">Re-enter Password</label>
+                    <input type="text" id="password2" class="user-form__input form-control" placeholder="Re-enter password" name="password2" required>
+                </div>
 
-            <button type="submit" class="button">Register</button>
-        </form>
+                <button type="submit" class="button">Register</button>
 
-        <div class="content-center">
-            <label >Already a User?</label>
+                <div class="">
+                    <label >Already a User?</label>
+                </div>
+                <a href="../login/login.html" class="button">Login</a>
+            </form>
         </div>
-        <a href="../login/login.html" class="button content-center">Login</a>
     </div>
     <!--    </section>-->
 </main>

@@ -23,22 +23,26 @@
                 <li class="nav__item"><a href="index.html#new-products" class="nav__link">New Arrivals</a></li>
                 <li class="nav__item"><a href="product-list.html" class="nav__link">Products</a></li>
                 <li class="nav__item"><a href="contact-us.html" class="nav__link">Contact Us</a></li>
+                <li class="nav__item"><a href="login/login.html" class="nav__link">Login</a></li>
             </ul>
         </div>
 
-        <div>
+        <div class="">
             <ul class="nav__list">
-                <li class="nav__item"><a href="login/login.html" class="nav__link">Login</a></li>
                 <li class="nav__item">   <a href="cart-details.html">
                     <i class="bx bx-cart nav__cart"></i>
                 </a></li>
+                <li class="nav__item">
+                    <a href="#" class="">
+                        <i class="bx bx-menu nav__toggle" id="nav-toggle"></i>
+                    </a>
+                </li>
             </ul>
-            <i class="bx bx-menu nav__toggle" id="nav-toggle"></i>
         </div>
     </nav>
 </header>
 
-<main class="section">
+<main class="main-content">
     <div class="grid">
         <h1 class="section-title">Shopping Cart</h1>
 
@@ -88,17 +92,20 @@
     </div>
 </main>
 
-<footer class="footer">
-    <div class="grid footer__container">
-        <div class="footer__deal">
-            <h3 class="footer__title">Subscribe to our newsletter</h3>
+<section class="newsletter section" id="subscribed">
+    <div class="newsletter__container grid">
+        <div class="newsletter__subscribed">
+            <h2 class="section-title">OUR NEWSLETTER</h2>
             <p class="newsletter__description">Stay updated with our latest offers and products</p>
-            <form action="#" class="newsletter__form">
-                <input type="email" class="newsletter__input" placeholder="Your Email">
-                <button type="submit" class="button">Subscribe</button>
+
+            <form action="" class="newsletter__form">
+                <input type="text" class="newsletter__input" placeholder="Enter your email">
+                <a href="#" class="button">SUBSCRIBE</a>
             </form>
         </div>
     </div>
+</section>
+<footer class="footer">
     <div class="footer__copy">
         <p>&copy; 2024 Triveni Sales. All rights reserved.</p>
     </div>

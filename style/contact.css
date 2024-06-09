@@ -5,9 +5,6 @@
 }
 
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     width: 100%;
 }
 
@@ -25,7 +22,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 500px; /* You can adjust this height as needed */
+    height: 600px; /* You can adjust this height as needed */
 }
 
 /* Adjust form group spacing */
