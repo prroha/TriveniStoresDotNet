@@ -224,7 +224,11 @@ Allowing for consistency accross app*/
     width: auto;
     /*max-width: 600px;*/
 }
-
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 /* HEADER */
 header {
     height: var(--header-height);
