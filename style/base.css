@@ -121,7 +121,6 @@ img {
 .section-title {
     font-size: var(--h2-font-size);
     color: var(--text-color);
-    /*margin: var(--mb-4) 0 var(--mb-1);*/
     text-align: center;
 }
 
@@ -169,7 +168,7 @@ img {
 /* Center content within main */
 /*This will set a container with fix width and the elements within it will have 100% of width.
 Allowing for consistency accross app*/
-.main-content {
+.main-content-center {
     display: flex;
     flex-direction: column;
     /*justify-content: center;*/
@@ -177,7 +176,8 @@ Allowing for consistency accross app*/
     min-height: 100vh;
     margin-top: calc(var(--header-height) + 1rem);
     padding: 1rem;
-    background-color: #f4f4f4;
+    background-color: var(--background-color);
+    transition: margin-left 0.3s ease-in-out;
 }
 .main-content-full {
     display: flex;
@@ -188,7 +188,26 @@ Allowing for consistency accross app*/
     padding: 1rem;
     background-color: #f4f4f4;
 }
+.page-title {
+    font-size: var(--h2-font-size);
+    color: var(--text-color);
+    text-align: center;
+}
 /* CARD */
+.responsive-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-small);
+    width: calc(100% - 3rem);
+    /*max-width: 1400px;*/
+    margin: 1rem auto;
+}
+
+@media screen and (min-width: 768px) {
+    .responsive-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+}
 .cards-container {
     display: flex;
     flex-direction: column;
@@ -333,6 +352,13 @@ form input:focus, form select:focus {
     outline: none;
     border-color: var(--primary-color);
 }
+
+/* Make the disabled input field visually distinct */
+input[readonly], input[disabled] {
+    background-color: var(--gray-color);
+    color: var(--dark-color-light);
+    cursor: not-allowed;
+}
 .user-form {
     display: grid;
     gap: 1rem;
@@ -380,4 +406,35 @@ form input:focus, form select:focus {
 textarea.user-form__input,
 textarea.form-control {
     resize: vertical;
+}
+/* Horizontal grouping for form elements */
+.horizontal-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-small);
+}
+
+.horizontal-group div {
+    display: flex;
+    flex-direction: column;
+}
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--mb-3);
+}
+
+table th, table td {
+    padding: var(--spacing-small);
+    border: var(--border-width) var(--border-style) var(--border-color);
+    text-align: left;
+}
+
+table th {
+    background-color: var(--gray-color);
+}
+
+table tr:nth-child(even) {
+    background-color: var(--white-color);
 }

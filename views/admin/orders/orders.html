@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Page - User Management</title>
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <title>Order Management</title>
     <link rel="stylesheet" href="../../../style/main.css">
     <link rel="stylesheet" href="../../../style/admin.css">
 </head>
@@ -15,7 +14,7 @@
         <li><a href="#">Dashboard</a></li>
         <li><a href="../users/users.html">Users</a></li>
         <li><a href="../products/products.html">Products</a></li>
-        <li><a href="../orders/orders.html">Orders</a></li>
+        <li><a href="#">Orders</a></li>
     </ul>
 </aside>
 
@@ -39,59 +38,70 @@
         </div>
     </div>
 </header>
+
+<!-- Main Content -->
 <main class="main-content-center">
     <div class="page-title">
-        <h2>User Management</h2>
+        <h2>Order Management</h2>
     </div>
     <div class="responsive-grid">
-        <div class="card">
-            <div class="">
-                <h3>User List</h3>
-                <table>
+            <div class="card">
+                <h3 class="card-title">Orders</h3>
+                <table class="order-table">
                     <thead>
                     <tr>
-                        <th>Username</th>
-                        <th>Email</th>
-                        <th>Role</th>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Date</th>
+                        <th>Status</th>
                         <th>Actions</th>
                     </tr>
                     </thead>
-                    <tbody id="userTableBody">
-                    <!-- Users will be dynamically inserted here -->
+                    <tbody>
+                    <tr>
+                        <td>#001</td>
+                        <td>John Doe</td>
+                        <td>2024-05-15</td>
+                        <td>Pending</td>
+                        <td>
+                            <button class="button edit-button" onclick="editOrder('001')">Edit</button>
+                            <button class="button-secondary delete-button" onclick="deleteOrder('001')">Delete</button>
+                        </td>
+                    </tr>
+                    <!-- Repeat for more orders -->
                     </tbody>
                 </table>
             </div>
-        </div>
 
-        <div class="card">
-            <div class="">
-                <h3>Create / Edit User</h3>
-                <form id="userForm" class="user-form">
+            <div class="card">
+                <h3 class="card-title">Edit Order</h3>
+                <form id="edit-order-form" class="user-form">
                     <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" class="user-form__input form-control" placeholder="Enter your name" name="username" required>
+                        <label for="order-id">Order ID</label>
+                        <input type="text" id="order-id" class="user-form__input" readonly>
                     </div>
-
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" class="user-form__input form-control" placeholder="Enter your email" required>
+                        <label for="customer-name">Customer Name</label>
+                        <input type="text" id="customer-name" class="user-form__input">
                     </div>
-
                     <div class="form-group">
-                        <label for="role">Role</label>
-                        <select name="role" id="role">
-                            <option value="admin">Admin</option>
-                            <option value="editor">Editor</option>
-                            <option value="viewer">Viewer</option>
+                        <label for="order-date">Order Date</label>
+                        <input type="date" id="order-date" class="user-form__input">
+                    </div>
+                    <div class="form-group">
+                        <label for="order-status">Order Status</label>
+                        <select id="order-status" class="user-form__input">
+                            <option value="pending">Pending</option>
+                            <option value="shipped">Shipped</option>
+                            <option value="delivered">Delivered</option>
+                            <option value="cancelled">Cancelled</option>
                         </select>
                     </div>
-
-                    <button type="submit" class="button">Save User</button>
+                    <button type="submit" class="button">Save Changes</button>
                 </form>
-
             </div>
         </div>
-    </div>
+
 </main>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -127,49 +137,25 @@
     }
 </script>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const userForm = document.getElementById('userForm');
-        const userTableBody = document.getElementById('userTableBody');
+    function editOrder(orderId) {
+        // Populate the form with order details for editing
+        // For demonstration, we're using hardcoded values
+        document.getElementById('order-id').value = orderId;
+        document.getElementById('customer-name').value = 'John Doe';
+        document.getElementById('order-date').value = '2024-05-15';
+        document.getElementById('order-status').value = 'pending';
+    }
 
-        userForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const username = userForm.username.value;
-            const email = userForm.email.value;
-            const role = userForm.role.value;
+    function deleteOrder(orderId) {
+        // Implement order deletion logic
+        alert(`Order #${orderId} deleted.`);
+    }
 
-            const newRow = document.createElement('tr');
-            newRow.innerHTML = `
-                    <td>${username}</td>
-                    <td>${email}</td>
-                    <td>${role}</td>
-                    <td>
-                        <button class="button" onclick="editUser(this)">Edit</button>
-                        <button class="button-secondary" onclick="deleteUser(this)">Delete</button>
-                    </td>
-                `;
-            userTableBody.appendChild(newRow);
-            userForm.reset();
-        });
+    document.getElementById('edit-order-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Implement order update logic
+        alert('Order updated.');
     });
-
-    function editUser(button) {
-        const row = button.parentElement.parentElement;
-        const username = row.cells[0].textContent;
-        const email = row.cells[1].textContent;
-        const role = row.cells[2].textContent;
-
-        const userForm = document.getElementById('userForm');
-        userForm.username.value = username;
-        userForm.email.value = email;
-        userForm.role.value = role;
-
-        row.remove();
-    }
-
-    function deleteUser(button) {
-        const row = button.parentElement.parentElement;
-        row.remove();
-    }
 </script>
 </body>
 </html>

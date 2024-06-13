@@ -34,12 +34,12 @@
         <li><a href="#">Dashboard</a></li>
         <li><a href="users/users.html">Users</a></li>
         <li><a href="products/products.html">Products</a></li>
-        <li><a href="#">Orders</a></li>
+        <li><a href="orders/orders.html">Orders</a></li>
     </ul>
 </aside>
-<main class="main-content">
+<main class="main-content-center">
     <!--    <section id="user-management" class="section">-->
-    <div class="section-title">
+    <div class="page-title">
         <h2>Edit Profile</h2>
     </div>
     <div class="card grid-two w-1000">
@@ -76,10 +76,41 @@
 </main>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        const userForm = document.getElementById('userForm');
-        const userTableBody = document.getElementById('userTableBody');
+        const profileDropdownButton = document.getElementById('profileDropdownButton');
+        const profileDropdown = document.getElementById('profileDropdown');
+        const logoutButton = document.getElementById('logout');
         const toggle = document.querySelector('.header__toggle');
         const sidebar = document.querySelector('.sidebar');
+
+        toggle.addEventListener('click', function () {
+            sidebar.classList.toggle('sidebar--active');
+        });
+
+        profileDropdownButton.addEventListener('click', function (e) {
+            e.stopPropagation();
+            profileDropdown.classList.toggle('admin-header__profile--active');
+        });
+
+        document.addEventListener('click', function () {
+            profileDropdown.classList.remove('admin-header__profile--active');
+        });
+        logoutButton.addEventListener('click', function () {
+            logout();
+        });
+    });
+    function logout(username, password) {
+        // const users = JSON.parse(localStorage.getItem('users')) || [];
+        // users = users.remove(user => user.username === username && user.password === password);
+        // users.push(userData);
+        // return localStorage.setItem('users', JSON.stringify(users));
+
+        window.location.href = '../../login/login.html';
+    }
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const userForm = document.getElementById('userForm');
+        const userTableBody = document.getElementById('userTableBody');
 
         toggle.addEventListener('click', function () {
             sidebar.classList.toggle('sidebar--active');
