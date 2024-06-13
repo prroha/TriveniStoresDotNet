@@ -15,6 +15,10 @@
     /*width: 40%;*/
     margin-right: 50px;
 }
+#prod-details .product-image-show .main-img{
+    height: 600px;
+    width: 100%;
+}
 .small-img-group{
     display: flex;
     justify-content: space-between;
@@ -29,16 +33,11 @@
 }
 
 #prod-details .product-info-detail select{
-    display: block;
-    padding: 5px 10px;
-    margin-bottom: 10px;
+    height: 47px;
 }
 #prod-details .product-info-detail input{
-    width: 50px;
+    width: 100px;
     height: 47px;
-    padding-left: 10px;
-    font-size: 16px;
-    margin-right: 10px;
 }
 #prod-details .product-info-detail input:focus{
     outline: none;
@@ -77,34 +76,4 @@
     color: var(--dark-color-light);
     text-align: left;
     margin-bottom: var(--mb-2);
-}
-/* Select Element Styling */
-select {
-    width: 100%;
-    padding: var(--spacing-small) var(--spacing-medium);
-    font-size: var(--normal-font-size);
-    color: var(--dark-color);
-    background-color: var(--gray-color);
-    border: var(--border-width) var(--border-style) var(--border-color);
-    border-radius: var(--border-radius);
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    margin-bottom: var(--mb-2);
-    cursor: pointer;
-}
-
-select:focus {
-    outline: none;
-    border-color: var(--first-color);
-}
-
-select option {
-    font-size: var(--normal-font-size);
-    color: var(--dark-color);
-    background-color: var(--white-color);
-}
-
-select:hover {
-    border-color: var(--first-color);
 }

@@ -97,11 +97,19 @@
     background-color: var(--gray-color);
 }
 
+.featured__img {
+    width: 100%;
+    height: 200px; /* Set a fixed height for the product images */
+    object-fit: cover; /* Ensure the images cover the container without distorting */
+    border-radius: 10px;
+}
+
 .featured__new {
     position: absolute;
     top: 0;
     left: 0;
     background-color: var(--first-color);
+    /*background-color: var(--secondary-color);*/
     color: var(--white-color);
     padding: .3rem .75rem;
     font-size: var(--small-font-size);
@@ -118,7 +126,8 @@
 }
 
 .featured__price {
-    color: var(--dark-color-light);
+    /*color: var(--dark-color-light);*/
+    color: var(--secondary-color);
     font-weight: var(--font-semi);
 }
 
@@ -395,6 +404,9 @@
 .mt-1 {
     margin-top: var(--mb-1);
 }
+.mt-2 {
+    margin-top: var(--mb-2);
+}
 .p-1 {
     padding: var(--pb-1);
 }
@@ -534,3 +546,132 @@
 }
 /*LAYOUT PART*/
 /*LAYOUT PART END*/
+/* CUSTOMER REVIEWS */
+.reviews {
+    padding: 2rem 0;
+    background-color: #f9f9f9;
+}
+
+.reviews__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.review {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.review__text {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.review__author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.review__img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+}
+
+.review__name {
+    font-weight: bold;
+}
+/* TESTIMONIALS */
+.testimonials {
+    padding: 2rem 0;
+}
+
+.testimonials__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.testimonial__text {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.testimonial__author {
+    margin-top: 1rem;
+}
+
+.testimonial__name {
+    font-weight: bold;
+}
+
+.testimonial__role {
+    color: #777;
+    font-size: 0.9rem;
+}
+/* DETAILED PRODUCT DESCRIPTIONS */
+.product-details {
+    padding: 2rem 0;
+    background-color: #f9f9f9;
+}
+
+.product__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product__details {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product__img {
+    width: 100%;
+    height: 200px; /* Set a fixed height for the product images */
+    object-fit: cover; /* Ensure the images cover the container without distorting */
+    border-radius: 10px;
+}
+
+.product__info {
+    margin-top: 1rem;
+}
+
+.product__name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.product__description {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.product__price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #e74c3c;
+}

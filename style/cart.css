@@ -8,12 +8,12 @@
     text-align: left;
 }
 
-.styled-table thead tr {
-    background-color: var(--first-color);
-    color: var(--white-color);
-    text-align: left;
-    font-weight: var(--font-bold);
-}
+/*.styled-table thead tr {*/
+/*    background-color: var(--first-color);*/
+/*    color: var(--white-color);*/
+/*    text-align: left;*/
+/*    font-weight: var(--font-bold);*/
+/*}*/
 
 .styled-table th, .styled-table td {
     padding: var(--spacing-small);
